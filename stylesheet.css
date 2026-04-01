@@ -158,7 +158,7 @@ header {
 
 .about {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     align-items: center;
     gap: 1.5rem;
 
@@ -612,7 +612,7 @@ section {
 
 .contact {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     align-items: center;
     gap: 3rem;
     padding-left: 30px;
@@ -789,3 +789,72 @@ section {
         opacity: 1;
     }
 }
+
+/* --- MOBILE RESPONSIVE --- */
+@media screen and (max-width: 991px) {
+    header { padding: 15px 5%; }
+    .navbar a { font-size: 18px; margin-left: 15px; }
+    .home { padding: 100px 5% 0; height: auto; }
+    .home-content { flex-direction: column-reverse; justify-content: center; text-align: center; }
+    .text-content { margin-top: 30px; }
+    .image-box { justify-content: center; margin-left: 0; }
+    .image-box img { width: 250px; margin: 0; }
+    .home-content h1 { font-size: 42px; }
+    .home-content h3 { font-size: 26px; }
+    .home-content p { font-size: 16px; }
+    
+    .about { grid-template-columns: 1fr; text-align: center; padding: 50px 5%; }
+    .image-box-about { display: flex; justify-content: center; }
+    .image-box-about img { width: 250px; margin: 0 0 30px 0; }
+    .about-text p { margin: 0 auto 30px; }
+    
+    /* SERVICES / PROJECTS: 2 COLUMNS */
+    .services-list { 
+        display: grid; 
+        grid-template-columns: 1fr; 
+        gap: 15px;
+        padding: 0 5%;
+    }
+    .services-list div { padding: 25px 20px; font-size: 14px;}
+    .services-list div h2 { font-size: 20px; }
+    
+    /* SKILLS */
+    section { display: block; }
+    .container1 { 
+        width: 100%; 
+        height: auto; 
+        margin-left: 0; 
+        padding: 30px 5%; 
+    }
+    
+    /* CONTACT */
+    .contact { 
+        grid-template-columns: 1fr; 
+        padding: 30px 5%; 
+        margin-top: 50px; 
+        text-align: center; 
+    }
+    .contact-text { align-items: center; padding-left: 0; }
+    .contact-text h2, .contact-text h4, .contact-text p { text-align: center; margin: 0 auto 20px; }
+    .contact-form form input, .contact-form textarea { width: 100%; }
+}
+
+@media screen and (max-width: 768px) {
+    header { justify-content: space-between; }
+    .navbar { display: none; }
+    .home-content h1 { font-size: 36px; }
+    .home-content h3 { font-size: 22px; }
+    .home-content p { font-size: 15px; }
+    .home-sc1 a { width: 35px; height: 35px; font-size: 18px; margin: 20px 10px 20px 0; }
+    
+    /* Nh? hon n?a thì skill radial bar thu g?n d? không b? dè nhau */
+    .radial-bars .radial-bar { width: 50%; height: 140px; }
+    .radial-bars .radial-bar svg { width: 100px; height: 140px; }
+    /* N?u mu?n màn hình di?n tho?i vu?t d?c 1 kh?i thì comment do?n này,
+       nhung b?n yêu c?u Services 2 c?t nên ta v?n gi? nguyên k? th?a lu?i 2 c?t t? 991px */
+}
+
+/* FIX HORIZONTAL SCROLL */
+body, html { overflow-x: hidden; width: 100%; }
+
+
